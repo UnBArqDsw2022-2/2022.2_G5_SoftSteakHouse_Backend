@@ -6,6 +6,7 @@ A aplicação é em **Python - Django**.
 
 Para executar: 
 ```
+pip install -r ./restaurante/myapi/requirements.txt
 python ./restaurante/myapi/manage.py runserver
 ```
 
