@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
-from .models import Item, Adicional
-from .serializers import ItemSerializer, AdicionalSerializer
+from .models import Item, Adicional, Mesa
+from .serializers import ItemSerializer, AdicionalSerializer, MesaSerializer
 
 class ItemViewSet(viewsets.ModelViewSet):
 
@@ -16,3 +16,10 @@ class AdicionalViewSet(viewsets.ModelViewSet):
     serializer_class = AdicionalSerializer
     filter_backends = [SearchFilter]
     search_fields = ['nome']
+
+class MesaViewSet(viewsets.ModelViewSet):
+
+    queryset = Mesa.objects.all()
+    serializer_class = MesaSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['qtdCadeiras']
