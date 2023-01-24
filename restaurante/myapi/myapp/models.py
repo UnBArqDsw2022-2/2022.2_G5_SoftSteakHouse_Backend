@@ -19,3 +19,9 @@ class Adicional(models.Model):
 
     nome = models.CharField(primary_key=True, max_length=100)
     preco = models.DecimalField(decimal_places=2, max_digits=5)
+
+class Mesa(models.Model):
+
+    nomeTipo = models.CharField(max_length=100)
+    qtdCadeiras = models.PositiveIntegerField()
+    qtdMesas = models.PositiveIntegerField()
